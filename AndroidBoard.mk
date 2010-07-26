@@ -24,10 +24,12 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/su | $(ACP)
 	$(transform-prebuilt-to-target)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := fformat
-LOCAL_MODULE_TAGS := eng
-LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
-LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
-LOCAL_SRC_FILES := fformat
-include $(BUILD_PREBUILT)
+file := $(TARGET_RECOVERY_ROOT_OUT)/sbin/fformat
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/fformat | $(ACP)
+	$(transform-prebuilt-to-target)
+
+file := $(TARGET_RECOVERY_ROOT_OUT)/res/sh
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/sh | $(ACP)
+	$(transform-prebuilt-to-target)
