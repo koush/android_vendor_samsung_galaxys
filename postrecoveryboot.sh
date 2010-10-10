@@ -18,3 +18,9 @@ rm /etc
 mkdir -p /etc
 mkdir -p /datadata
 chmod 4777 /sbin/su
+
+if [ -L /sdcard ]
+then
+    rm -f sdcard
+    mkdir -p /sdcard
+fi
